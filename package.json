@@ -1,5 +1,5 @@
 {
-  "name": "a1-backflow-production",
+  "name": "a1-backflow-starter",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -10,8 +10,7 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.2.1",
-    "astro": "^4.16.18"
+    "astro": "4.16.18"
   },
   "devDependencies": {}
 }

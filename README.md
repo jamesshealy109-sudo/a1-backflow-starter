@@ -1,26 +1,15 @@
-# A-1 BackFlow Production Draft
+# A-1 Backflow Starter
 
-Modern Astro redesign for A-1 BackFlow Specialties using Pantone 291 C inspired baby blue.
+Astro static site configured for GitHub Pages Actions.
 
-## Run locally
+## Local
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Build
+## Deploy
 
-```bash
-npm run build
-```
-
-## GitHub Pages
-
-This repo is static and GitHub Pages ready. The included workflow deploys `dist/` on pushes to `main`.
-
-Update `astro.config.mjs` if your repo name changes:
-
-```js
-base: '/your-repo-name'
-```
+Repo Settings → Pages → Source: GitHub Actions.
+Push to `main`.
