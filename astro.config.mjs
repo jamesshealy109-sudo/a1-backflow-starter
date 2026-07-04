@@ -2,6 +2,8 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://www.a-1backflowspecialties.com',
+  site: 'https://jamesshealy109-sudo.github.io',
+  base: '/a1-backflow-production',
   integrations: [sitemap()],
+  output: 'static'
 });

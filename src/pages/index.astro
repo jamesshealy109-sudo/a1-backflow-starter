@@ -1,172 +1,27 @@
 ---
-import '../styles/global.css';
-
-const phoneDisplay = '803 530-4489';
-const phoneHref = 'tel:8035304489';
-const email = 'office@a-1backflowspecialties.com';
-const mailto = `mailto:${email}?subject=BackFlow%20Testing%20Request&body=Name:%0AAddress:%0AEmail:%0APhone:%0AResidential%20or%20Commercial:%0A`;
-const logo = 'https://cloud-1de12d.becdn.net/media/original/25cdd1885e84ad9ec5f5e04d3e4b1db2/A-1-backflow-logo.png';
-const resi = 'https://cloud-1de12d.becdn.net/media/iW%3D155%26iH%3D206%26oX%3D2%26oY%3D0%26cW%3D150%26cH%3D206/2e7c0b981a5ecdff93f795a7177b3016/Resi-BF.jpg';
-const gauge = 'https://cloud-1de12d.becdn.net/media/iW%3D383%26iH%3D510%26oX%3D0%26oY%3D59%26cW%3D383%26cH%3D393/a1c2a1f45f841b946b5a20294e6783b4/PressureGauge.jpg';
-const field = 'https://cloud-1de12d.becdn.net/media/iW%3D458%26iH%3D343%26oX%3D0%26oY%3D19%26cW%3D458%26cH%3D305/d1a76871578d9b8a25edee99493fff63/IMG-7071.jpg';
-
-const faqs = [
-  ['How do we get started?', 'Please provide your name, address, and email, and we will preform the test for you within the next 14 days: no appointment needed.'],
-  ['Is upfront payment required?', 'We offer flexible payment options and do not require upfront payment for We require payment within 10 days of completion to ensure that the report is sent to the municipality on time. Failure to make payment within this timeframe may result in a retest and additional charges'],
-  ['What is a BackFlow preventor?', 'Backflow Preventers are mechanical plumbing devices installed in a plumbing system to prevent water from flowing backward in the system. A properly installed, tested and maintained backflow preventer at the service entrance to a building or property can reliably prevent the backflow of water of an unknown quality from flowing back into the community water system.'],
-  ['What is a cross-connection?', 'A cross-connection is any temporary or permanent connection between a public water system or consumer’s potable (drinking) water system and any source or system containing non-potable water or other substances. An example is the piping between a public water system or consumer’s potable water system and an auxiliary water system, cooling system, or irrigation system.'],
-  ['What can cause a backflow?', 'Backflow can be caused by a sudden drop in the water pressure in a public water main, which can create a sub-atmospheric condition. For example, if a drop in pressure occurs while a hose is in a bucket of dirty water, that water could be sucked back into the public water system, potentially contaminating the water for other users. A drop in pressure could be caused by a variety of things, including a water main break, loss of power at a pump station, etc. Backflow preventers keep this from happening.']
-];
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Sections from '../components/Sections.astro';
+import Footer from '../components/Footer.astro';
+import { company } from '../data/site.js';
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: company.name,
+  slogan: company.tagline,
+  telephone: company.phone,
+  email: company.email,
+  address: { '@type': 'PostalAddress', addressLocality: 'Lexington', addressRegion: 'SC', addressCountry: 'US' },
+  areaServed: company.serviceArea
+};
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Expert BackFlow Solutions by A-1 BackFlow</title>
-    <meta name="description" content="Experience Top-Quality BackFlow Solutions with A-1 BackFlow Expert Services." />
-    <link rel="icon" href={logo} />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#9BCBEB" />
-    <meta property="og:title" content="Expert BackFlow Solutions by A-1 BackFlow" />
-    <meta property="og:description" content="Experience Top-Quality BackFlow Solutions with A-1 BackFlow Expert Services." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content={logo} />
-    <script type="application/ld+json" set:html={JSON.stringify({
-      '@context':'https://schema.org',
-      '@type':'LocalBusiness',
-      name:'A-1 BackFlow',
-      telephone:'803-530-4489',
-      email,
-      url:'https://www.a-1backflowspecialties.com',
-      image: logo,
-      priceRange:'$45-$60',
-      areaServed:'South Carolina',
-      sameAs:['https://www.facebook.com/p/A-1-Backflow-Specialties-LLC-100037756974332/']
-    })}></script>
-  </head>
-  <body>
-    <a class="skip" href="#main">Skip to content</a>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="A-1 BackFlow home">
-        <img src={logo} alt="A-1 BackFlow" />
-        <span>A-1 BackFlow</span>
-      </a>
-      <nav aria-label="Primary navigation">
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#questions">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="header-call" href={phoneHref}>Call Us Now</a>
-    </header>
-
-    <main id="main">
-      <section id="top" class="hero section">
-        <div class="hero-copy">
-          <p class="eyebrow">Backflow Prevention</p>
-          <h1>Expert BackFlow Solutions by A-1 BackFlow</h1>
-          <p class="lead">Experience Top-Quality BackFlow Solutions with A-1 BackFlow Expert Services</p>
-          <div class="actions">
-            <a class="btn primary" href={mailto}>Learn More</a>
-            <a class="btn secondary" href={phoneHref}>Call Us Now</a>
-          </div>
-          <div class="stats">
-            <div><strong>{phoneDisplay}</strong><span>Call Us Now</span></div>
-            <div><strong>+10k</strong><span>Happy Clients</span></div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <img src={logo} alt="A-1 BackFlow logo" />
-          <div class="water-lines" aria-hidden="true"></div>
-        </div>
-      </section>
-
-      <section id="services" class="section intro-grid">
-        <div>
-          <p class="eyebrow">Backflow Prevention</p>
-          <h2>Protect your water supply with our reliable backflow prevention services.</h2>
-        </div>
-        <div class="service-card feature-card">
-          <img src={resi} alt="Residential backflow device" loading="lazy" />
-          <h3>Reliable Backflow Prevention by A-1 BackFlow</h3>
-          <p>Trustworthy Backflow Prevention Services Offered by A-1 BackFlow Experts</p>
-        </div>
-        <div class="service-card feature-card">
-          <img src={gauge} alt="Pressure gauge for backflow testing" loading="lazy" />
-          <h3>Reliable Backflow Prevention and Repair Services for Your BackFlow System</h3>
-        </div>
-      </section>
-
-      <section id="pricing" class="section split pricing-section">
-        <div>
-          <p class="eyebrow">Pricing</p>
-          <h2>Pricing</h2>
-          <p>It costs $45 for residential locations and $60 for commercial locations. Customers in Camden Water, Cassatt Water, and Gilbert-Summit Water areas may have extra charges. There is a fee of 75 cents for every mile beyond 50 miles from Columbia.</p>
-        </div>
-        <div class="price-grid">
-          <article class="price-card"><span>Residential</span><strong>$45</strong></article>
-          <article class="price-card"><span>Commercial</span><strong>$60</strong></article>
-        </div>
-      </section>
-
-      <section class="section process">
-        <p class="eyebrow">How do we get started?</p>
-        <div class="steps">
-          <div><span>1</span><p>Please provide your name, address, and email</p></div>
-          <div><span>2</span><p>We will preform the test for you within the next 14 days</p></div>
-          <div><span>3</span><p>No appointment needed</p></div>
-        </div>
-      </section>
-
-      <section id="questions" class="section faq-section">
-        <div class="faq-heading">
-          <p class="eyebrow">FREQUENT QUESTIONS</p>
-          <h2>Reliable Backflow Prevention and Repair Services for Your BackFlow System</h2>
-        </div>
-        <div class="faq-list">
-          {faqs.map(([question, answer], index) => (
-            <details open={index === 0}>
-              <summary>{question}</summary>
-              <p>{answer}</p>
-            </details>
-          ))}
-        </div>
-      </section>
-
-      <section class="section image-band">
-        <img src={field} alt="Backflow field work" loading="lazy" />
-        <div>
-          <p class="eyebrow">Licensed & insured</p>
-          <h2>Trust A-1 BackFlow Specialties for all of your BackFlow Testing Needs</h2>
-          <p>A-1 is fully licensed and insured. We carry all necessary licenses and insurance to operate our business legally and safely. Our insurance coverage includes liability insurance, workers' compensation, and any other necessary coverage to protect our clients and our employees. You can have peace of mind knowing that A-1 is a responsible and reliable company that takes the safety and security of our clients and employees seriously.</p>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact-section">
-        <div>
-          <p class="eyebrow">Contact us now</p>
-          <h2>Trust A-1 BackFlow Specialties for all of your BackFlow Testing Needs</h2>
-          <div class="contact-cards">
-            <a href={`mailto:${email}`}><small>Email</small><strong>{email}</strong></a>
-            <a href={phoneHref}><small>Phone</small><strong>803- 530-4489</strong></a>
-          </div>
-        </div>
-        <form class="contact-form" action={mailto} method="post" enctype="text/plain">
-          <label>Name <input name="name" autocomplete="name" /></label>
-          <label>Address <input name="address" autocomplete="street-address" /></label>
-          <label>Email <input name="email" type="email" autocomplete="email" /></label>
-          <label>Message <textarea name="message" rows="4"></textarea></label>
-          <button class="btn primary" type="submit">Send</button>
-        </form>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div>
-        <img src={logo} alt="A-1 BackFlow" />
-        <span>A-1 BackFlow</span>
-      </div>
-      <p>A-1 BackFlow © 2025 - All rights reserved.</p>
-    </footer>
-  </body>
-</html>
+<BaseLayout title="A-1 BackFlow Specialties | The Best Backflow Specialist" description="A-1 BackFlow Specialties provides certified backflow testing and expert BackFlow Solutions in Lexington, Columbia, and the South Carolina Midlands.">
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Header />
+  <main>
+    <Hero />
+    <Sections />
+  </main>
+  <Footer />
+</BaseLayout>

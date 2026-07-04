@@ -1,8 +1,0 @@
-{
-  "name": "A-1 BackFlow",
-  "short_name": "A-1 BackFlow",
-  "icons": [{"src":"/assets/A-1-backflow-logo.png","sizes":"512x512","type":"image/png"}],
-  "theme_color": "#9BCBEB",
-  "background_color": "#ffffff",
-  "display": "standalone"
-}

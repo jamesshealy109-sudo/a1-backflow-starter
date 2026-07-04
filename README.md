@@ -1,6 +1,6 @@
-# A-1 BackFlow Starter Repo
+# A-1 BackFlow Production Draft
 
-Modern static starter for A-1 BackFlow Specialties.
+Modern Astro redesign for A-1 BackFlow Specialties using Pantone 291 C inspired baby blue.
 
 ## Run locally
 
@@ -15,9 +15,12 @@ npm run dev
 npm run build
 ```
 
-## Notes
+## GitHub Pages
 
-- Brand color is Pantone 291 C approximation: `#9BCBEB`.
-- Existing public wording was preserved and reorganized into a cleaner layout.
-- Form is wired as a `mailto:` fallback. Replace with Formspree, Netlify Forms, or your backend when ready.
-- Existing logo/images are in `public/assets/`.
+This repo is static and GitHub Pages ready. The included workflow deploys `dist/` on pushes to `main`.
+
+Update `astro.config.mjs` if your repo name changes:
+
+```js
+base: '/your-repo-name'
+```
