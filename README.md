@@ -1,15 +1,20 @@
-# A-1 Backflow Starter
+# A-1 BackFlow Website Redo
 
-Astro static site configured for GitHub Pages Actions.
+Static website repo. No npm, no Astro, no build step, no dependency install.
 
-## Local
+## GitHub Pages
 
-```bash
-npm install
-npm run dev
-```
+Use one of these:
 
-## Deploy
+1. Settings → Pages → Deploy from a branch → `main` → `/root`
+2. Or leave GitHub Actions enabled and use the included workflow.
 
-Repo Settings → Pages → Source: GitHub Actions.
-Push to `main`.
+## Files
+
+- `index.html`
+- `assets/styles.css`
+- `assets/script.js`
+
+## Content
+
+The page uses the existing public website wording and contact information. Placeholder text has been removed.
