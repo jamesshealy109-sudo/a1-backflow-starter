@@ -1,20 +1,14 @@
-# A-1 BackFlow Website Redo
+# A-1 BackFlow Specialties
 
-Static website repo. No npm, no Astro, no build step, no dependency install.
+Astro GitHub Pages repo using the existing site wording with a refreshed Pantone 291 C design.
 
-## GitHub Pages
+## Run locally
 
-Use one of these:
+```bash
+npm install
+npm run dev
+```
 
-1. Settings → Pages → Deploy from a branch → `main` → `/root`
-2. Or leave GitHub Actions enabled and use the included workflow.
+## Deploy
 
-## Files
-
-- `index.html`
-- `assets/styles.css`
-- `assets/script.js`
-
-## Content
-
-The page uses the existing public website wording and contact information. Placeholder text has been removed.
+Set GitHub Pages to **GitHub Actions**. Push to `main`.
