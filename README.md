@@ -1,14 +1,20 @@
 # A-1 BackFlow Specialties
 
-Astro GitHub Pages repo using the existing site wording with a refreshed Pantone 291 C design.
-
-## Run locally
-
-```bash
-npm install
-npm run dev
-```
+Deployment-ready static GitHub Pages site.
 
 ## Deploy
 
-Set GitHub Pages to **GitHub Actions**. Push to `main`.
+1. Upload/commit every file in this folder to the repo root.
+2. In GitHub: Settings → Pages → Source: GitHub Actions.
+3. Push to `main`.
+4. The included workflow deploys without npm, Node, package-lock, Astro, or build dependencies.
+
+## Logo
+
+The uploaded A-1 BackFlow logo is included at:
+
+`assets/images/a1-backflow-logo.png`
+
+## Brand color
+
+Pantone 291 C approximation: `#A7D8F0`.
